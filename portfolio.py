@@ -33,7 +33,7 @@ elif menu.startswith("👤"):
     st.markdown('<div class="title">About Me</div>', unsafe_allow_html=True)
     col1, col2 = st.columns([1, 3])
     with col1:
-        image = Image.open("my_photo.jpg")  # Replace with your image
+        image = Image.open("my_photo.JPG")  # Replace with your image
         st.image(image, caption='Mukesh DT', width=200)
     with col2:
         st.markdown("""
