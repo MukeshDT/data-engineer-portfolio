@@ -87,9 +87,9 @@ st.markdown("""
 """)
 
 
-
+# -- Lets connect --
+st.markdown('<div class="section-header">💼 Let’s Connect</div>', unsafe_allow_html=True)
 st.markdown("""
-<h3>📬 Contact Me</h3>
 <form action="https://formsubmit.co/mail2mukesh92@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;"><br><br>
