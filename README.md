@@ -85,7 +85,7 @@ streamlit run app.py
 
 ## 🌐  Deployment
 
-###📌 1. **Streamlit Cloud**
+### 📌 1. **Streamlit Cloud**
 Go to https://share.streamlit.io
 
 Connect your GitHub repo
@@ -94,7 +94,7 @@ Choose app.py as the entry point
 
 Deploy — a public URL is generated automatically
 
-###📌 2. **GitHub Pages for Thank You**
+### 📌 2. **GitHub Pages for Thank You**
 Commit thankyou.html to the repo root
 
 In GitHub settings:
