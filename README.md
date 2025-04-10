@@ -80,3 +80,28 @@ pip install streamlit
 
 # 4. Run the app locally
 streamlit run app.py
+
+---
+
+##🌐 Deployment
+
+#📌 1. Streamlit Cloud
+Go to https://share.streamlit.io
+
+Connect your GitHub repo
+
+Choose app.py as the entry point
+
+Deploy — a public URL is generated automatically
+
+#📌 2. GitHub Pages for Thank You
+Commit thankyou.html to the repo root
+
+In GitHub settings:
+
+Go to Pages
+
+Set source: main branch → /root
+
+Your page will be live at:
+https://<your-username>.github.io/<repo-name>/thankyou.html
