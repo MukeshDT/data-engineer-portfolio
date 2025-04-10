@@ -9,7 +9,7 @@ st.markdown("""
     <style>
     /* Full-page background fix */
     .stApp {
-        background: linear-gradient(to right, #8e2de2, #4a00e0);
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
         background-attachment: fixed;
         background-size: cover;
     }
