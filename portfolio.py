@@ -1,96 +1,93 @@
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_title="My Data Engineer Portfolio", layout="wide")
+# Page setup
+st.set_page_config(page_title="My Portfolio", layout="wide")
 
-# --- Custom Header ---
+# --- Custom CSS for background and styling ---
 st.markdown("""
     <style>
-    .main {
-        background-color: #f0f2f6;
+    body, .main {
+        background: linear-gradient(to right, #fceabb, #f8b500);
     }
     .title {
-        font-size:40px;
-        color:#4B8BBE;
+        font-size:40px; 
+        color:#4B8BBE; 
+        font-weight: bold;
     }
     .subhead {
-        font-size:22px;
-        color:#306998;
+        font-size:24px; 
+        color:#306998; 
+        margin-bottom: 30px;
+    }
+    .section-header {
+        font-size:28px; 
+        color:#FF6F61; 
+        margin-top: 50px;
     }
     </style>
 """, unsafe_allow_html=True)
 
-menu = st.sidebar.radio("🌐 Navigate", ["🏠 Home", "👤 About", "💼 Projects", "📄 Resume", "📬 Contact"])
+# --- HOME ---
+st.markdown('<div class="title">Hi, I\'m <span style="color:#FF6F61;">Mukesh DT</span> 👋</div>', unsafe_allow_html=True)
+st.markdown('<div class="subhead">AWS Data Engineer | SQL & Python Expert | Cloud Enthusiast ☁️</div>', unsafe_allow_html=True)
+st.write("Welcome to my interactive portfolio! 🚀 I'm passionate about building scalable data solutions and working with cloud-native tools.")
 
-# HOME
-if menu.startswith("🏠"):
-    st.markdown('<div class="title">Hi, I\'m <span style="color:#FF6F61;">Mukesh DT</span> 👋</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subhead">AWS Data Engineer | SQL & Python Expert | Cloud Lover ☁️</div>', unsafe_allow_html=True)
-    st.write("Welcome to my interactive portfolio! 🚀")
-
-# ABOUT
-elif menu.startswith("👤"):
-    st.markdown('<div class="title">About Me</div>', unsafe_allow_html=True)
-    col1, col2 = st.columns([1, 3])
-    with col1:
-        image = Image.open("my_photo.JPG")  # Replace with your image
-        st.image(image, caption='Mukesh DT', width=200)
-    with col2:
-        st.markdown("""
-        <span style="font-size:18px">
-        🎯 **9+ years** of IT experience  
-        🔧 **SQL/PLSQL Expert** and **3+ years in AWS Data Engineering**  
-        🛠️ Skilled in **Redshift**, **Glue**, **S3**, and **CloudWatch**
-        🌍 Based in **Bengaluru, India**
-        </span>
-        """, unsafe_allow_html=True)
-
-# PROJECTS
-elif menu.startswith("💼"):
-    st.markdown('<div class="title">Projects</div>', unsafe_allow_html=True)
-
-    with st.expander("🚀 HSBC Open Banking ETL"):
-        st.markdown("""
-        - ✅ Converted flat schema to star schema  
-        - 🧪 Tools: **AWS S3**, **Glue**, **Redshift**, **CloudWatch**  
-        - 📈 Improved performance by 60%  
-        """)
-
-    with st.expander("📊 YouTube Analytics Pipeline"):
-        st.markdown("""
-        - 📡 Pulled data using **YouTube API**  
-        - 🧺 Stored in **S3**, queried with **Athena**  
-        - 📊 Visualized with **QuickSight**  
-        """)
-
-    with st.expander("💬 Real-Time Twitter Sentiment"):
-        st.markdown("""
-        - 🐍 Built pipeline with **Kafka + Spark Streaming**  
-        - 🧠 Performed sentiment analysis  
-        - 📍 Stored results in **Redshift**, visualized in **QuickSight**
-        """)
-
-# RESUME
-elif menu.startswith("📄"):
-    st.markdown('<div class="title">Resume</div>', unsafe_allow_html=True)
-    st.markdown("[📥 Download Resume (PDF)](https://your-resume-link.com)", unsafe_allow_html=True)
-    st.success("Tip: Keep your resume updated every 3–6 months.")
-
-# CONTACT
-elif menu.startswith("📬"):
-    st.markdown('<div class="title">Contact</div>', unsafe_allow_html=True)
-
+# --- ABOUT ---
+st.markdown('<div class="section-header">👤 About Me</div>', unsafe_allow_html=True)
+col1, col2 = st.columns([1, 3])
+with col1:
+    image = Image.open("your_photo.jpg")  # Replace with your image
+    st.image(image, caption='Mukesh DT', width=200)
+with col2:
     st.markdown("""
-    📧 **Email:** mail2mukesh92@gmail.com  
-    🔗 **LinkedIn:** [linkedin.com/in/MukeshDT](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)  
-    💻 **GitHub:** [github.com/MukeshDT](https://github.com/MukeshDT)  
+    - 🎓 9+ years of IT experience  
+    - 💻 6+ years in SQL/PLSQL, 3+ years in AWS Data Engineering  
+    - ☁️ Skilled in **AWS Glue**, **Redshift**, **S3**, **CloudWatch**  
+    - 📊 Strong in data modeling, performance tuning & ETL workflows  
+    - 📍 Based in Bengaluru, India
     """)
 
-    st.write("📨 Drop me a message:")
-    with st.form(key="contact_form"):
-        name = st.text_input("Name")
-        email = st.text_input("Email")
-        message = st.text_area("Message")
-        submit = st.form_submit_button("Send")
-        if submit:
-            st.success("✅ Thanks for your message! I’ll reply soon.")
+# --- PROJECTS ---
+st.markdown('<div class="section-header">💼 Projects</div>', unsafe_allow_html=True)
+
+with st.expander("🚀 HSBC Open Banking ETL"):
+    st.markdown("""
+    - Converted flat schema to star schema  
+    - Used **AWS Glue**, **S3**, and **Redshift**  
+    - Enabled efficient reporting and better performance  
+    """)
+
+with st.expander("📊 YouTube Analytics Pipeline"):
+    st.markdown("""
+    - Used **YouTube API** to extract video data  
+    - Stored in **S3**, queried with **Athena**, visualized in **QuickSight**  
+    """)
+
+with st.expander("💬 Twitter Sentiment Analysis"):
+    st.markdown("""
+    - Real-time processing using **Kafka** + **Spark Streaming**  
+    - Sentiment analysis with NLP  
+    - Stored in **Redshift**, dashboards in **QuickSight**
+    """)
+
+# --- RESUME ---
+st.markdown('<div class="section-header">📄 Resume</div>', unsafe_allow_html=True)
+st.markdown("[📥 Download Resume](https://your-resume-link.com)", unsafe_allow_html=True)
+st.info("Tip: Keep your resume updated every 3–6 months.")
+
+# --- CONTACT ---
+st.markdown('<div class="section-header">📬 Contact Me</div>', unsafe_allow_html=True)
+st.markdown("""
+- 📧 **Email:** your.email@example.com  
+- 🔗 **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+- 💻 **GitHub:** [github.com/yourusername](https://github.com/yourusername)
+""")
+
+with st.form("contact_form"):
+    name = st.text_input("Your Name")
+    email = st.text_input("Your Email")
+    message = st.text_area("Your Message")
+    submitted = st.form_submit_button("Send")
+    if submitted:
+        st.success("Thanks for reaching out! I'll get back to you soon 😊")
