@@ -92,7 +92,7 @@ st.markdown('<div class="section-header">💼 Lets Connect</div>', unsafe_allow_
 st.markdown("""
 <form action="https://formsubmit.co/mail2mukesh92@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://github.com/MukeshDT/data-engineer-portfolio/blob/main/thankyou.html">
+    <input type="hidden" name="_next" value="https://mukeshdt.github.io/data-engineer-portfolio/thankyou.html">
     <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;"><br><br>
     <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;"><br><br>
     <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 10px;"></textarea><br><br>
