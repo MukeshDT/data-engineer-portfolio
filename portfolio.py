@@ -86,15 +86,7 @@ st.markdown("""
 - 💻 **GitHub:** [github.com/MukeshDT](https://github.com/MukeshDT)
 """)
 
-"""
-   with st.form("contact_form"):
-    name = st.text_input("Your Name")
-    email = st.text_input("Your Email")
-    message = st.text_area("Your Message")
-    submitted = st.form_submit_button("Send")
-    if submitted:
-        st.success("Thanks for reaching out! I'll get back to you soon 😊")
-""""
+
 
 st.markdown("""
 <h3>📬 Contact Me</h3>
