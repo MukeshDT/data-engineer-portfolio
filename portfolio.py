@@ -88,7 +88,7 @@ st.markdown("""
 
 
 # -- Lets connect --
-st.markdown('<div class="section-header">💼 Let's Connect</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">💼 Lets Connect</div>', unsafe_allow_html=True)
 st.markdown("""
 <form action="https://formsubmit.co/mail2mukesh92@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
@@ -98,6 +98,5 @@ st.markdown("""
     <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none;">Send</button>
 </form>
 """, unsafe_allow_html=True)
-if submitted:
-        st.success("Thanks for reaching out! I'll get back to you soon 😊")
+
 
