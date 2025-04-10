@@ -80,11 +80,10 @@ pip install streamlit
 
 # 4. Run the app locally
 streamlit run app.py
-
+```
 ---
 
-## *De*
-## 🌐 Setup Locally Deployment
+## 🌐  Deployment
 
 #📌 1. Streamlit Cloud
 Go to https://share.streamlit.io
