@@ -37,7 +37,7 @@ st.write("Welcome to my interactive portfolio! 🚀 I'm passionate about buildin
 st.markdown('<div class="section-header">👤 About Me</div>', unsafe_allow_html=True)
 col1, col2 = st.columns([1, 3])
 with col1:
-    image = Image.open("your_photo.JPG")  # Replace with your image
+    image = Image.open("my_photo.JPG")  # Replace with your image
     st.image(image, caption='Mukesh DT', width=200)
 with col2:
     st.markdown("""
