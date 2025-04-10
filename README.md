@@ -83,7 +83,7 @@ streamlit run app.py
 
 ---
 
-##🌐 Deployment
+## 🌐 Deployment
 
 #📌 1. Streamlit Cloud
 Go to https://share.streamlit.io
